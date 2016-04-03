@@ -1,0 +1,22 @@
+<ion-view view-title="My Idea detail" ng-controller="myOneIdeaCtrl">
+  <ion-content scroll="true" overflow-scroll="false">
+    <div class="list card">
+      <div class="item item-divider">
+        <h2>{{idea.ideaTitle}}</h2>
+      </div>
+      <div class="item item-body" >
+         <span> <img class="myCard padding" ng-src={{idea.image}}>
+           {{idea.text}}
+         </span>
+      </div>
+      <p class="padding-top">
+        <a href="#" class="subdued padding">{{idea.like}} Like</a>
+        <a href="#" class="subdued padding">{{idea.dislike}} Comments</a>
+      </p>
+    </div>
+  </ion-content>
+
+</ion-view>
+
+
+

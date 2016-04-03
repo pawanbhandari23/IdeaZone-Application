@@ -1,0 +1,23 @@
+<ion-view view-title="My Ideas">
+  <ion-content class="cardBackground" scroll="true" overflow-scroll="false">
+    <div class="list card" collection-repeat="idea in myIdeasList">
+      <div class="item item-divider">
+        <h2>{{idea.ideaTitle}}</h2>
+      </div>
+      <div class="item item-body" >
+         <span class="item"> <img class="myCard padding" ng-src={{idea.image}} alt="no image">
+           <a class="button button-clear pull-right" href="#/app/myIdeas/{{idea.id}}"><i class="fa fa-angle-double-right" style="font-size: 4em;"></i></a>
+           <br>
+           {{idea.text}}
+         </span>
+      </div>
+      <p class="padding-top">
+        <a href="#" class="subdued padding">{{idea.like}} Like</a>
+        <a href="#" class="subdued padding">{{idea.dislike}} Comments</a>
+      </p>
+    </div>
+  </ion-content>
+</ion-view>
+
+
+

@@ -1,0 +1,32 @@
+
+<ion-view view-title="Explore Ideas">
+
+    <ion-pane ng-controller="CardsCtrl" class="ideaPane" no-scroll>
+      <swipe-cards on-card-swipe="onSwipe($event)">
+
+        <swipe-cards>
+          <swipe-card on-card-swipe="cardSwiped()" id="start-card">
+            Swipe down for a random idea
+            <i class="fa fa-smile-o" style="font-size: 3em;"></i>
+          </swipe-card>
+          <swipe-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-card-swipe="cardSwiped($index)">
+
+            <div ng-controller="CardCtrl">
+              <div class="title">
+                {{card.title}}
+              </div>
+              <div class="image">
+                <img ng-src="{{card.image}}">
+              </div>
+              <div class="button-bar">
+                <button class="button button-clear button-positive" >Like</button>
+                <button class="button button-clear button-positive" ng-click="goAway()">DisLike</button>
+              </div>
+            </div>
+          </swipe-card>
+        </swipe-cards>
+    </ion-pane>
+
+
+</ion-view>
+
